@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: "Web Dev Portfolio",
-      description: "Brief description of your first project.",
+      description: "A visually engaging and interactive developer portfolio crafted with Next.js. It combines sleek UI design using Tailwind CSS with fluid animations powered by GSAP. The project utilizes components from Aceternity UI to create a modern, immersive browsing experience.",
       demo: "/Project1.png",
       technologies: [
         {
@@ -50,8 +50,8 @@ const Projects: React.FC = () => {
           image: "/tech/tailwindcss.svg",
         },
       ],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://yaswanthpalivela.vercel.app/",
+      githubLink: "https://github.com/YaswanthPalivela/web-dev-portfolio",
     },
     {
       id: 2,
