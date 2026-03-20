@@ -6,12 +6,55 @@ import {
   IconUser,
   IconCode,
   IconBulb,
-  IconBriefcase,
   IconBrain,
   IconBook,
 } from "@tabler/icons-react";
-import { World } from "../components/globe";
+import dynamic from "next/dynamic";
+
+const World = dynamic(() => import("../components/globe").then((mod) => mod.World), {
+  ssr: false,
+  loading: () => <div className="w-full h-full min-h-[250px]"><Skeleton /></div>,
+});
+
+
+
 /* -------- Globe Data -------- */
+
+const items = [
+  {
+    title: "Who I Am",
+    description:
+      "I'm Yaswanth, a Full Stack Developer passionate about building modern web applications.",
+    header: "/developer.png",
+    icon: <IconUser className="h-4 w-4 text-neutral-500" />,
+    className: "md:col-span-2",
+  },
+  {
+    title: "Tech Stack",
+    description: "React, Next.js, Node.js, MongoDB and Tailwind CSS.",
+    header: "/tech.png",
+    icon: <IconCode className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Clean Development",
+    description: "Maintainable code, reusable components, scalable UI.",
+    header: "/idea2.png",
+    icon: <IconBulb className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Problem Solving",
+    description: "Breaking complex problems into scalable solutions.",
+    header: "/problemsolving.png",
+    icon: <IconBrain className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Continuous Learning",
+    description: "Exploring advanced frontend and backend architecture.",
+    header: "/learning.png",
+    icon: <IconBook className="h-4 w-4 text-neutral-500" />,
+  },
+];
+
 
 const globeData = [
   {
@@ -100,7 +143,7 @@ const GlobeCard = () => (
 
 /* -------- Main Section -------- */
 
-export function BentoGridDemo() {
+const BentoGridDemo = () => {
   return (
 <section id="about" className="py-20 px-4">
   <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
@@ -148,39 +191,6 @@ export function BentoGridDemo() {
   );
 }
 
+export default BentoGridDemo;
 /* -------- Items -------- */
 
-const items = [
-  {
-    title: "Who I Am",
-    description:
-      "I'm Yaswanth, a Full Stack Developer passionate about building modern web applications.",
-    header: "/developer.png",
-    icon: <IconUser className="h-4 w-4 text-neutral-500" />,
-    className: "md:col-span-2",
-  },
-  {
-    title: "Tech Stack",
-    description: "React, Next.js, Node.js, MongoDB and Tailwind CSS.",
-    header: "/tech.png",
-    icon: <IconCode className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Clean Development",
-    description: "Maintainable code, reusable components, scalable UI.",
-    header: "/idea2.png",
-    icon: <IconBulb className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Problem Solving",
-    description: "Breaking complex problems into scalable solutions.",
-    header: "/problemsolving.png",
-    icon: <IconBrain className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "Continuous Learning",
-    description: "Exploring advanced frontend and backend architecture.",
-    header: "/learning.png",
-    icon: <IconBook className="h-4 w-4 text-neutral-500" />,
-  },
-];

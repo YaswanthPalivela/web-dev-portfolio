@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "@/pages/Hero";
 import Techstack from "@/pages/Techstack";
 import Navbar from "@/pages/Navbar";
-import {BentoGridDemo} from "@/pages/AboutMe";
+import BentoGridDemo from "@/pages/AboutMe";
 import Projects from "@/pages/Projects";
 import Contact from "@/pages/Contact"
 import Footer from "@/pages/Footer"
