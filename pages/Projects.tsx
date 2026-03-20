@@ -113,7 +113,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Projects
         </h2>
@@ -133,7 +133,7 @@ const Projects: React.FC = () => {
                   <img
                 src={project.demo}
                 alt={project.title}
-                className="rounded-lg mb-4 object-fit h-36 w-full"
+                className="rounded-lg mb-4 object-cotain h-36 w-full"
               />
 
 

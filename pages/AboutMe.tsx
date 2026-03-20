@@ -151,7 +151,7 @@ const BentoGridDemo = () => {
   </h2>
 
   {/* BENTO GRID */}
-  <BentoGrid className="max-w-5xl mx-auto hover:cursor-pointer">
+  <BentoGrid className="max-w-6xl mx-auto hover:cursor-pointer">
     {items.map((item, i) => (
       <BentoGridItem key={i} {...item} />
     ))}
