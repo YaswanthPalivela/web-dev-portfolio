@@ -158,7 +158,7 @@ const BentoGridDemo = () => {
   </BentoGrid>
 
   {/* 🌍 WORKING WORLDWIDE CARD */}
-  <div className="max-w-5xl mx-auto mt-6">
+  <div className="max-w-6xl mx-auto mt-6">
     <div className="flex flex-col md:flex-row items-center gap-6 border border-neutral-800 bg-neutral-900/40 backdrop-blur-md rounded-xl p-6 group hover:shadow-lg transition">
       
       {/* LEFT - TEXT */}
